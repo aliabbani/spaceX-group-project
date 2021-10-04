@@ -6,7 +6,6 @@ import spaceReducer from './reducers/dataReducers';
 const reducer = combineReducers({
   spaceReducer,
 });
-
 const store = createStore(
   reducer,
   applyMiddleware(thunk, logger),
