@@ -1,9 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import '../stylesheet/navbar.css';
-import { useDispatch } from 'react-redux';
 import logo from '../images/logo.png';
-import { fetchPostsRequestRockets, fetchPostsRequestMissions } from '../redux/reducers';
 
 const Navbar = () => {
   const links = [
@@ -23,7 +21,6 @@ const Navbar = () => {
       text: 'My Profile',
     },
   ];
-  const dispatch = useDispatch();
   return (
     <>
       <nav className="navBar">
@@ -43,20 +40,6 @@ const Navbar = () => {
                 className="left-nav-a"
                 activeClassName="active-link"
                 exact
-                onClick={() => {
-                  switch (link.path) {
-                    case '/':
-                      dispatch(fetchPostsRequestRockets());
-                      break;
-                    case '/missions':
-                      dispatch(fetchPostsRequestMissions());
-                      break;
-                    case './profile':
-                      break;
-                    default:
-                      break;
-                  }
-                }}
               >
                 {link.text}
               </NavLink>

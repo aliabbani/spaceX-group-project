@@ -1,7 +1,10 @@
+/* eslint camelcase: 0 */
 const FETCH_LOADING = 'FETCH_LOADING';
 const FETCH_SUCCESS_ROCKETS = 'FETCH_SUCCESS_ROCKETS';
 const FETCH_SUCCESS_MISSIONS = 'FETCH_SUCCESS_MISSIONS';
 const FETCH_ERROR = 'FETCH_ERROR';
+const ADD_ROCKET = 'ADD_ROCKET';
+const REMOVE_ROCKET = 'REMOVE_ROCKET';
 
 const initialState = {
   loading: true,
@@ -10,6 +13,16 @@ const initialState = {
   userRockets: [],
   userMissions: [],
 };
+
+export const addRocket = (payload) => ({
+  type: ADD_ROCKET,
+  payload,
+});
+
+export const removeRocket = (payload) => ({
+  type: REMOVE_ROCKET,
+  payload,
+});
 
 export const fetchPostsSuccessRockets = (payload) => ({
   type: FETCH_SUCCESS_ROCKETS,
@@ -33,7 +46,27 @@ export const fetchPostsRequestRockets = () => async (dispatch) => {
   dispatch(fetchPostsLoading());
   const request = await fetch('https://api.spacexdata.com/v3/rockets');
   const result = await request.json();
-  dispatch(fetchPostsSuccessRockets(result));
+  dispatch(
+    fetchPostsSuccessRockets(
+      result.map((rocket) => {
+        const result_min = (({
+          id,
+          rocket_type,
+          flickr_images,
+          rocket_name,
+          description,
+        }) => ({
+          id,
+          rocket_type,
+          flickr_images,
+          rocket_name,
+          description,
+          reserved: false,
+        }))(rocket);
+        return result_min;
+      }),
+    ),
+  );
 };
 
 export const fetchPostsRequestMissions = () => async (dispatch) => {
@@ -56,14 +89,12 @@ const reducer = (state = initialState, action) => {
       return {
         loading: false,
         rockets: action.payload,
-        error: '',
       };
 
     case FETCH_SUCCESS_MISSIONS:
       return {
         loading: false,
         missions: action.payload,
-        error: '',
       };
 
     case FETCH_ERROR:
@@ -72,6 +103,26 @@ const reducer = (state = initialState, action) => {
         rockets: [],
         missions: [],
         error: action.payload,
+      };
+
+    case ADD_ROCKET:
+      return {
+        ...state,
+        rockets: [
+          ...state.rockets.map((rocket) => (rocket.id === action.payload
+            ? { ...rocket, reserved: true }
+            : rocket)),
+        ],
+      };
+
+    case REMOVE_ROCKET:
+      return {
+        ...state,
+        rockets: [
+          ...state.rockets.map((rocket) => (rocket.id === action.payload
+            ? { ...rocket, reserved: false }
+            : rocket)),
+        ],
       };
 
     default:
