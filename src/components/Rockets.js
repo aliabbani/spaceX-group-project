@@ -9,7 +9,7 @@ const Rockets = () => {
   useEffect(() => {
     dispatch(fetchPostsRequestRockets());
   }, [dispatch]);
-  const rockets = useSelector((state) => state.spacereducer.rockets);
+  const rockets = useSelector((state) => state.spaceReducer.rockets);
   return (
     <div>
       {rockets.map((rocket) => (
