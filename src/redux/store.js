@@ -3,6 +3,7 @@ import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import spaceReducer from './reducers/dataReducers';
 
+
 const reducer = combineReducers({
   spaceReducer,
 });
