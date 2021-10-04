@@ -1,50 +1,51 @@
 .left-nav {
-    display: flex;
-    flex-flow: row;
-    justify-content: flex-start;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
 }
 
 .nav-elements {
-    display: flex;
-    flex-flow: row;
-    list-style: none;
-    line-height: 100px;
+  display: flex;
+  flex-flow: row;
+  list-style: none;
+  line-height: 100px;
 }
 
 .logo-nav {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 }
 
 .navBar {
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-    padding: 20px 70px 20px 70px;
-    height: 200px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  padding: 20px 70px 20px 70px;
+  height: 200px;
 }
 
 .right-nav-li {
-    padding-left: 40px;
-    font-size: 1.7em;
+  padding-left: 40px;
+  font-size: 1.7em;
 }
 
 .right-nav-li > a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .active-link {
-    color: rgb(0, 60, 255);
-    text-decoration: underline !important;
+  color: rgb(0, 60, 255);
+  text-decoration: underline !important;
 }
 
 .line-bot {
-    width: 90%;
-    margin: auto;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 100px;
 }
 
 .main-title {
-    line-height: 100px;
-    padding-left: 20px;
-    font-weight: bold;
+  line-height: 100px;
+  padding-left: 20px;
+  font-weight: bold;
 }

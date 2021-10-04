@@ -1,15 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import RocketInfo from './RocketInfo';
 import { fetchPostsRequestRockets } from '../redux/reducers';
-import { useDispatch } from 'react-redux';
 
 const Rockets = () => {
   const dispatch = useDispatch();
-  dispatch(fetchPostsRequestRockets);
+  useEffect(() => {
+    dispatch(fetchPostsRequestRockets());
+  }, [dispatch]);
+  const rockets = useSelector((state) => state.spacereducer.rockets);
   return (
     <div>
-    <h1>Hello from the rockets page</h1>
-  </div>
-  )
-}
+      {rockets.map((rocket) => (
+        <RocketInfo rocket={rocket} key={uuidv4()} />
+      ))}
+    </div>
+  );
+};
 
 export default Rockets;

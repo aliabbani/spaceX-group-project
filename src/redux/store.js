@@ -1,15 +1,15 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
-import spacereducer from '../redux/reducers'
+import spacereducer from './reducers';
 
 const reducer = combineReducers({
-  spacereducer
+  spacereducer,
 });
 
 const store = createStore(
   reducer,
-  applyMiddleware(thunk,logger),
+  applyMiddleware(thunk, logger),
 );
 
 export default store;
