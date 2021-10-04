@@ -23,21 +23,24 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="navBar">
-      <div className="left-nav">
-        <img src={logo} alt="logo" />
-        <h1>Space Travelers Hub</h1>
-      </div>
-      <ul>
-        {links.map((link) => (
-          <li className="right-nav-li" key={link.id}>
-            <NavLink to={link.path} className="left-nav-a" activeClassName="active-link" exact>
-              {link.text}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <>
+      <nav className="navBar">
+        <div className="left-nav">
+          <img src={logo} alt="logo" className="logo-nav" />
+          <h1 className="main-title">Space Travelers Hub</h1>
+        </div>
+        <ul className="nav-elements">
+          {links.map((link) => (
+            <li className="right-nav-li" key={link.id}>
+              <NavLink to={link.path} className="left-nav-a" activeClassName="active-link" exact>
+                {link.text}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <hr className="line-bot" />
+    </>
   );
 };
 
