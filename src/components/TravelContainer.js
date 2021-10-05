@@ -6,15 +6,21 @@ import Rockets from './Rockets';
 import Missions from './Missions';
 import Profile from './Profile';
 import NotMatch from '../pages/NotMatch';
-import { fetchPostsRequestRockets } from '../redux/reducers/dataReducers';
+import { fetchPostsRequestRockets, fetchPostsRequestMissions } from '../redux/reducers/dataReducers';
 
 function TravelContainer() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchPostsRequestRockets());
+    dispatch(fetchPostsRequestMissions());
   }, []);
   const rocketsTemp = useSelector((state) => state.spaceReducer.rockets);
   const rockets = { rocketsTemp };
+
+  const missionsTemp = useSelector((state) => state.spaceReducer.missions);
+  const missions = { missionsTemp };
+  console.log('missionsTemp is ', missionsTemp);
+
   return (
     <>
       <Navbar />
@@ -23,7 +29,7 @@ function TravelContainer() {
           <Rockets rockets={rockets} />
         </Route>
         <Route path="/missions">
-          <Missions />
+          <Missions missions={missions} />
         </Route>
         <Route path="/profile">
           <Profile />
