@@ -31,8 +31,11 @@ const RocketInfo = (props) => {
           <div className="col-md-8">
             <div className="card-body">
               <h2 className="card-title p0">{rocket_name}</h2>
-              <h5 className="card-text">{description}</h5>
-              {reserved[(id - 1)] ? (
+              <h5 className="card-text">
+                {reserved[id - 1] && <button type="button" className="small-reserved"> Reserved </button>}
+                {description}
+              </h5>
+              {reserved[id - 1] ? (
                 <button
                   type="button"
                   className="btn btn-secondary my-4"

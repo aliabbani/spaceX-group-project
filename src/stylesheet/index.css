@@ -3,3 +3,19 @@
   margin: 0;
   padding: 0;
 }
+
+.small-reserved {
+  background-color: #459da0;
+  width: 80px;
+  height: auto;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  color: #fff;
+  margin-right: 10px;
+  font-size: 0.8em;
+}
+
+.small-reserved:hover {
+  cursor: text;
+}
