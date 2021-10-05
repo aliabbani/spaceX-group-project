@@ -10,8 +10,13 @@ import ProfileRocketsBottom from './ProfileRocketsBottom';
 
 const ProfileRocketsContainer = () => {
   const rockets = useSelector((state) => state.spaceReducer.rockets);
+  const reserved = rockets.filter((rocket) => rocket.reserved === true);
   return (
     <div>
+      <h3 className="mx-5 my-4">
+        {' '}
+        {reserved.length > 0 ? 'Reserved rockets' : 'No rockets reserved!' }
+      </h3>
       <Tab.Container id="list-group-tabs-example" defaultActiveKey="#">
         <Row>
           <Col sm={4} className="mx-5">
