@@ -1,8 +1,9 @@
 import React from 'react';
+import ProfileRocketsContainer from './ProfileRocketsContainer';
 
 const Profile = () => (
   <div>
-    <h1> hello from the profile page</h1>
+    <ProfileRocketsContainer />
   </div>
 );
 
