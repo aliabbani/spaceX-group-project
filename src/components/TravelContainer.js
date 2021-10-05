@@ -17,9 +17,7 @@ function TravelContainer() {
   const rocketsTemp = useSelector((state) => state.spaceReducer.rockets);
   const rockets = { rocketsTemp };
 
-  const missionsTemp = useSelector((state) => state.spaceReducer.missions);
-  const missions = { missionsTemp };
-  console.log('missionsTemp is ', missionsTemp);
+  const missions = useSelector((state) => state.spaceReducer.missions);
 
   return (
     <>

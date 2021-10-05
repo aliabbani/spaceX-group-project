@@ -1,29 +1,38 @@
 /* eslint-disable camelcase */
-/* eslint-disable react/prop-types */
+import PropTypes from 'prop-types';
+import '../stylesheet/missionInfo.css';
+
 const Missions = (props) => {
-  const { missions } = props;
-  const { missionsTemp } = missions;
+  const {
+    missions,
+  } = props;
+
   return (
     <table className="table table-striped table-bordered">
       <thead>
         <tr>
-          <td colSpan="1">Mission</td>
-          <td colSpan="2" className="description-row">Description</td>
-          <td colSpan="1">Status</td>
-          <td colSpan="1">{' '}</td>
+          <th className="mission-row">Mission</th>
+          <th className="description-row">Description</th>
+          <th className="mission-row">Status</th>
+          <th className="mission-row">{' '}</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          {missionsTemp.map((mission) => (
-            <>
-              <th scope="row">{mission.mission_name}</th>
-              <td colSpan="2">{mission.description}</td>
-            </>
-          ))}
-        </tr>
+        {missions.map((mission) => (
+          <tr key={mission.mission_id}>
+            <th scope="row">{mission.mission_name}</th>
+            <td>{mission.description}</td>
+            <td>Status</td>
+            <td>{' '}</td>
+          </tr>
+        ))}
       </tbody>
     </table>
   );
 };
+
+Missions.propTypes = {
+  missions: PropTypes.instanceOf(Object).isRequired,
+};
+
 export default Missions;
