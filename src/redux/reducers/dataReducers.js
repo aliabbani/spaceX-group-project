@@ -73,15 +73,31 @@ export const fetchPostsRequestMissions = () => async (dispatch) => {
   dispatch(fetchPostsLoading());
   const request = await fetch('https://api.spacexdata.com/v3/missions');
   const result = await request.json();
-  dispatch(fetchPostsSuccessMissions(result));
+  dispatch(
+    fetchPostsSuccessMissions(
+      result.map((mission) => {
+        const result_min = (({
+          mission_id,
+          mission_name,
+          description,
+        }) => ({
+          mission_id,
+          mission_name,
+          description,
+          join: false,
+        }))(mission);
+        return result_min;
+      }),
+    ),
+  );
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_LOADING:
       return {
-        rockets: [],
-        missions: [],
+        rockets: [...state.rockets],
+        missions: [...state.missions],
         loading: true,
       };
 
@@ -89,12 +105,14 @@ const reducer = (state = initialState, action) => {
       return {
         loading: false,
         rockets: action.payload,
+        missions: [...state.missions],
       };
 
     case FETCH_SUCCESS_MISSIONS:
       return {
         loading: false,
         missions: action.payload,
+        rockets: [...state.rockets],
       };
 
     case FETCH_ERROR:
