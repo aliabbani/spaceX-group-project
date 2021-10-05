@@ -32,7 +32,7 @@ const Missions = (props) => {
 };
 
 Missions.propTypes = {
-  missions: PropTypes.instanceOf(Object).isRequired,
+  missions: PropTypes.instanceOf(Array).isRequired,
 };
 
 export default Missions;
