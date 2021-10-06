@@ -25,7 +25,7 @@ const Missions = (props) => {
           <tr key={mission.mission_id}>
             <th scope="row">{mission.mission_name}</th>
             <td>{mission.description}</td>
-            <td className="align-middle">
+            <td className="align-middle text-center">
               {mission.reserved
                 ? <span className="badge bg-primary ">ACTIVE MEMBER</span>
                 : <span className="badge bg-secondary">NOT A MEMBER</span>}
@@ -34,7 +34,7 @@ const Missions = (props) => {
               {mission.reserved === true ? (
                 <button
                   type="button"
-                  className="btn-outline-danger"
+                  className="btn btn-outline-danger"
                   onClick={() => dispatch(leaveMission(mission.mission_id))}
                 >
                   Leave Mission
