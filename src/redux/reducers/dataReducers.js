@@ -5,6 +5,8 @@ const FETCH_SUCCESS_MISSIONS = 'FETCH_SUCCESS_MISSIONS';
 const FETCH_ERROR = 'FETCH_ERROR';
 const ADD_ROCKET = 'ADD_ROCKET';
 const REMOVE_ROCKET = 'REMOVE_ROCKET';
+const JOIN_MISSION = 'JOIN_MISSION';
+const LEAVE_MISSION = 'LEAVE_MISSION';
 
 const initialState = {
   loading: true,
@@ -26,6 +28,16 @@ export const removeRocket = (payload) => ({
 
 export const fetchPostsSuccessRockets = (payload) => ({
   type: FETCH_SUCCESS_ROCKETS,
+  payload,
+});
+
+export const joinMission = (payload) => ({
+  type: JOIN_MISSION,
+  payload,
+});
+
+export const leaveMission = (payload) => ({
+  type: LEAVE_MISSION,
   payload,
 });
 
@@ -84,7 +96,7 @@ export const fetchPostsRequestMissions = () => async (dispatch) => {
           mission_id,
           mission_name,
           description,
-          join: false,
+          reserved: false,
         }))(mission);
         return result_min;
       }),
@@ -140,6 +152,26 @@ const reducer = (state = initialState, action) => {
           ...state.rockets.map((rocket) => (rocket.id === action.payload
             ? { ...rocket, reserved: false }
             : rocket)),
+        ],
+      };
+
+    case JOIN_MISSION:
+      return {
+        ...state,
+        missions: [
+          ...state.missions.map((mission) => ((mission.mission_id === action.payload)
+            ? { ...mission, reserved: true }
+            : mission)),
+        ],
+      };
+
+    case LEAVE_MISSION:
+      return {
+        ...state,
+        missions: [
+          ...state.missions.map((mission) => ((mission.mission_id === action.payload)
+            ? { ...mission, reserved: false }
+            : mission)),
         ],
       };
 

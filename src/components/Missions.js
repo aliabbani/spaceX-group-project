@@ -1,8 +1,11 @@
 /* eslint-disable camelcase */
 import PropTypes from 'prop-types';
-import '../stylesheet/missionInfo.css';
+import '../stylesheet/missions.css';
+import { useDispatch } from 'react-redux';
+import { joinMission, leaveMission } from '../redux/reducers/dataReducers';
 
 const Missions = (props) => {
+  const dispatch = useDispatch();
   const {
     missions,
   } = props;
@@ -22,8 +25,30 @@ const Missions = (props) => {
           <tr key={mission.mission_id}>
             <th scope="row">{mission.mission_name}</th>
             <td>{mission.description}</td>
-            <td>Status</td>
-            <td>{' '}</td>
+            <td className="align-middle text-center">
+              {mission.reserved
+                ? <span className="badge bg-primary ">ACTIVE MEMBER</span>
+                : <span className="badge bg-secondary">NOT A MEMBER</span>}
+            </td>
+            <td className="align-middle text-center">
+              {mission.reserved === true ? (
+                <button
+                  type="button"
+                  className="btn btn-outline-danger"
+                  onClick={() => dispatch(leaveMission(mission.mission_id))}
+                >
+                  Leave Mission
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  className="btn btn-outline-secondary"
+                  onClick={() => dispatch(joinMission(mission.mission_id))}
+                >
+                  Join Mission
+                </button>
+              ) }
+            </td>
           </tr>
         ))}
       </tbody>
