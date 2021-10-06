@@ -11,48 +11,50 @@ const Missions = (props) => {
   } = props;
 
   return (
-    <table className="table table-striped table-bordered">
-      <thead>
-        <tr>
-          <th className="mission-row">Mission</th>
-          <th className="description-row">Description</th>
-          <th className="mission-row">Status</th>
-          <th className="mission-row">{' '}</th>
-        </tr>
-      </thead>
-      <tbody>
-        {missions.map((mission) => (
-          <tr key={mission.mission_id}>
-            <th scope="row">{mission.mission_name}</th>
-            <td>{mission.description}</td>
-            <td className="align-middle text-center">
-              {mission.reserved
-                ? <span className="badge bg-primary ">ACTIVE MEMBER</span>
-                : <span className="badge bg-secondary">NOT A MEMBER</span>}
-            </td>
-            <td className="align-middle text-center">
-              {mission.reserved === true ? (
-                <button
-                  type="button"
-                  className="btn btn-outline-danger"
-                  onClick={() => dispatch(leaveMission(mission.mission_id))}
-                >
-                  Leave Mission
-                </button>
-              ) : (
-                <button
-                  type="button"
-                  className="btn btn-outline-secondary"
-                  onClick={() => dispatch(joinMission(mission.mission_id))}
-                >
-                  Join Mission
-                </button>
-              ) }
-            </td>
+    <div className="px-5">
+      <table className="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th className="mission-row w-15">Mission</th>
+            <th className="description-row w-55">Description</th>
+            <th className="mission-row w-15">Status</th>
+            <th className="mission-row w-15">{' '}</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {missions.map((mission) => (
+            <tr key={mission.mission_id}>
+              <th scope="row">{mission.mission_name}</th>
+              <td>{mission.description}</td>
+              <td className="align-middle text-center">
+                {mission.reserved
+                  ? <span className="badge bg-primary ">ACTIVE MEMBER</span>
+                  : <span className="badge bg-secondary">NOT A MEMBER</span>}
+              </td>
+              <td className="align-middle text-center">
+                {mission.reserved === true ? (
+                  <button
+                    type="button"
+                    className="btn btn-outline-danger"
+                    onClick={() => dispatch(leaveMission(mission.mission_id))}
+                  >
+                    Leave Mission
+                  </button>
+                ) : (
+                  <button
+                    type="button"
+                    className="btn btn-outline-secondary"
+                    onClick={() => dispatch(joinMission(mission.mission_id))}
+                  >
+                    Join Mission
+                  </button>
+                ) }
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 };
 
