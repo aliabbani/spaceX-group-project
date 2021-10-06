@@ -3,7 +3,7 @@ import ProfileRocketsContainer from './ProfileRocketsContainer';
 import ProfileMissions from './ProfileMissions';
 
 const Profile = () => (
-  <div>
+  <div className="profile-container">
     <ProfileRocketsContainer />
     <ProfileMissions />
   </div>
