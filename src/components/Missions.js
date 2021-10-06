@@ -30,7 +30,7 @@ const Missions = (props) => {
                 ? <span className="badge bg-primary ">ACTIVE MEMBER</span>
                 : <span className="badge bg-secondary">NOT A MEMBER</span>}
             </td>
-            <td className="align-middle">
+            <td className="align-middle text-center">
               {mission.reserved === true ? (
                 <button
                   type="button"
