@@ -6,6 +6,7 @@ import Rockets from './Rockets';
 import Missions from './Missions';
 import Profile from './Profile';
 import NotMatch from '../pages/NotMatch';
+import Spinner from './Spinner';
 import { fetchPostsRequestRockets, fetchPostsRequestMissions } from '../redux/reducers/dataReducers';
 
 function TravelContainer() {
@@ -16,13 +17,14 @@ function TravelContainer() {
   }, []);
   const rocketsTemp = useSelector((state) => state.spaceReducer.rockets);
   const rockets = { rocketsTemp };
-
+  const loading = useSelector((state) => state.spaceReducer.loading);
   const missions = useSelector((state) => state.spaceReducer.missions);
 
   return (
     <>
       <Navbar />
       <Switch>
+        {loading && <Spinner />}
         <Route exact path="/">
           <Rockets rockets={rockets} />
         </Route>
