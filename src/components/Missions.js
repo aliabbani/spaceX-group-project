@@ -11,7 +11,7 @@ const Missions = (props) => {
   } = props;
 
   return (
-    <div className="px-5">
+    <div className="main-missions px-5">
       <table className="table table-striped table-bordered">
         <thead>
           <tr>

@@ -19,3 +19,8 @@
 .small-reserved:hover {
   cursor: text;
 }
+
+.main-rocket,
+.main-missions {
+  padding-top: 5vh;
+}
