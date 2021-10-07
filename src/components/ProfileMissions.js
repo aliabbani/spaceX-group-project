@@ -3,7 +3,6 @@ import {
   Tab, ListGroup,
 } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
-// Create condition, if reserved is true, then show the title My Missions
 
 const ProfileMissions = () => {
   const missions = useSelector((state) => state.spaceReducer.missions);

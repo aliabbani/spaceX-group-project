@@ -49,6 +49,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-// eslint-disable-next-line no-lone-blocks
-{ /* <hr className="line-bot" /> */ }
