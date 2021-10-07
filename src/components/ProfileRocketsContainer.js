@@ -11,8 +11,12 @@ import ProfileRocketsBottom from './ProfileRocketsBottom';
 const ProfileRocketsContainer = () => {
   const rockets = useSelector((state) => state.spaceReducer.rockets);
   const reserved = rockets.filter((rocket) => rocket.reserved === true);
+
+  const maxw = {
+    maxWidth: '50%',
+  };
   return (
-    <div>
+    <div style={maxw}>
       <h3>
         {' '}
         {reserved.length > 0 ? 'Reserved rockets' : 'No rockets reserved!' }

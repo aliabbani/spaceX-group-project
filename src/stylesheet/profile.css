@@ -14,3 +14,7 @@
 .box {
   width: 40vw;
 }
+
+.left {
+  display: flex;
+}
