@@ -1,0 +1,17 @@
+.profile-container {
+  display: flex;
+
+  /* justify-content: space-between; */
+  padding: 0 8vw;
+}
+
+.mission-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 5vw;
+}
+
+.box {
+  width: 40vw;
+}

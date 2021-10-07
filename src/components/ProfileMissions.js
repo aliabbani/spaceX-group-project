@@ -1,4 +1,7 @@
 import React from 'react';
+import {
+  Tab, ListGroup,
+} from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 // Create condition, if reserved is true, then show the title My Missions
 
@@ -7,26 +10,28 @@ const ProfileMissions = () => {
   const joined = missions.filter((mission) => mission.reserved === true);
 
   return (
-    <div>
-      <h3 className="mx-5 my-4">
-        {joined.reserved > 0 ? 'My Missions' : 'No Missions joined!'}
+    <div className="mission-container">
+      <h3>
+        {joined.length > 0 ? 'My Missions' : 'No Missions joined!'}
       </h3>
       {joined.map((join) => (
-        <>
-          <div key={join.mission_id}>
+        <Tab.Container key={join.mission_id}>
+
+          <ListGroup>
             {join.reserved === true ? (
-              <h2>
+              <ListGroup.Item className="box">
                 {join.mission_name}
                 {' '}
-              </h2>
+              </ListGroup.Item>
             ) : (
               <h2>
                 {null}
                 {' '}
               </h2>
             )}
-          </div>
-        </>
+          </ListGroup>
+
+        </Tab.Container>
       ))}
     </div>
   );

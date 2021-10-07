@@ -13,14 +13,14 @@ const ProfileRocketsContainer = () => {
   const reserved = rockets.filter((rocket) => rocket.reserved === true);
   return (
     <div>
-      <h3 className="mx-5 my-4">
+      <h3>
         {' '}
         {reserved.length > 0 ? 'Reserved rockets' : 'No rockets reserved!' }
       </h3>
       <Tab.Container id="list-group-tabs-example" defaultActiveKey="#">
         <Row>
-          <Col sm={4} className="mx-5">
-            <ListGroup mx={4}>
+          <Col>
+            <ListGroup>
               {rockets.map((rocket) => (
                 rocket.reserved ? <ProfileRocketsTop rocket={rocket} key={uuidv4()} /> : null
               ))}
@@ -28,7 +28,7 @@ const ProfileRocketsContainer = () => {
           </Col>
         </Row>
         <Row>
-          <Col sm={4} className="mx-5">
+          <Col>
             <Tab.Content>
               {rockets.map((rocket) => (
                 rocket.reserved ? <ProfileRocketsBottom rocket={rocket} key={uuidv4()} /> : null
