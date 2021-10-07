@@ -49,7 +49,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Live Demo
 
-[Live Demo]()
+[Live Demo](https://travelxhub.herokuapp.com/)
 
 ## Authors 
 
@@ -57,17 +57,17 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Robert's Profile
 
-- GitHub: [@githubhandle](https://github.com/ReshyResh)
-- Twitter: [@twitterhandle](https://twitter.com/reshyresh)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/reshyresh/)
+- [GitHub](https://github.com/ReshyResh)
+- [AngelList](https://angel.co/u/robert-baiesita)
+- [LinkedIn](https://www.linkedin.com/in/reshyresh/)
 
 👤 **Ali Abbani**
 
 ## Ali's Profile
 
-- GitHub: [@githubhandle](https://github.com/aliabbani)
-- Twitter: [@twitterhandle](https://twitter.com/aliabbani)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ali-abbani-8b6246150/)
+- [GitHub](https://github.com/aliabbani)
+- [AngelList](https://angel.co/u/ali-abbani)
+- [LinkedIn](https://www.linkedin.com/in/ali-abbani-8b6246150/)
 
 ## 🤝 Contributing
 
