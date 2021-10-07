@@ -1,6 +1,7 @@
 .profile-container {
   display: flex;
   padding: 0 8vw;
+  justify-content: space-evenly;
 }
 
 .mission-container {
