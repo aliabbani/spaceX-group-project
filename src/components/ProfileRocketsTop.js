@@ -6,7 +6,7 @@ const ProfileRocketsTop = (props) => {
   const { rocket } = props;
   const { id, rocket_name } = rocket;
   return (
-    <ListGroup.Item action href={`#${id}`}>
+    <ListGroup.Item className="box" action href={`#${id}`}>
       {rocket_name}
     </ListGroup.Item>
   );

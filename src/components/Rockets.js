@@ -7,7 +7,7 @@ const Rockets = (props) => {
   const { rockets } = props;
   const { rocketsTemp } = rockets;
   return (
-    <div>
+    <div className="main-rocket">
       {rocketsTemp.map((rocket) => (
         <RocketInfo rocket={rocket} key={uuidv4()} />
       ))}

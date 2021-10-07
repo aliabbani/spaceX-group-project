@@ -1,0 +1,20 @@
+.profile-container {
+  display: flex;
+  padding: 0 8vw;
+  justify-content: space-evenly;
+}
+
+.mission-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 5vw;
+}
+
+.box {
+  width: 40vw;
+}
+
+.left {
+  display: flex;
+}

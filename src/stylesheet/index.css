@@ -20,6 +20,11 @@
   cursor: text;
 }
 
+.main-rocket,
+.main-missions {
+  padding-top: 5vh;
+}
+
 .spinner-container {
   width: 100%;
   height: 100%;
