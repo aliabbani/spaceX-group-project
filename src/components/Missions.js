@@ -58,8 +58,12 @@ const Missions = (props) => {
   );
 };
 
+Missions.defaultProps = {
+  missions: [],
+};
+
 Missions.propTypes = {
-  missions: PropTypes.instanceOf(Array).isRequired,
+  missions: PropTypes.instanceOf(Array),
 };
 
 export default Missions;

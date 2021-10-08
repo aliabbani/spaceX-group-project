@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component test snapshot Missions renders correctly 1`] = `
+<div
+  className="main-missions px-5"
+>
+  <table
+    className="table table-striped table-bordered"
+  >
+    <thead>
+      <tr>
+        <th
+          className="mission-row w-15"
+        >
+          Mission
+        </th>
+        <th
+          className="description-row w-55"
+        >
+          Description
+        </th>
+        <th
+          className="mission-row w-15"
+        >
+          Status
+        </th>
+        <th
+          className="mission-row w-15"
+        >
+           
+        </th>
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+</div>
+`;
+
+exports[`Component test snapshot Router renders correctly 1`] = `
+<a
+  aria-current="page"
+  className="active"
+  href="/"
+  onClick={[Function]}
+  style={Object {}}
+>
+  Rockets
+</a>
+`;
