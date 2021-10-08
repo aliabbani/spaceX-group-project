@@ -1,6 +1,24 @@
-# Getting Started with Create React App
+# spaceX-group-project:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Rockets (Homepage)
+![screenshot](./src/images/Capture.PNG)
+
+### Missions Page
+![screenshot](./src/images/Capture1.PNG)
+
+### My Profile Page
+![screenshot](./src/images/Capture2.PNG)
+
+This project is a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions. 
+
+## Getting started :
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and Redux Library.
+
+to get a local copy in your machine :
+
+- clone the repository running `git clone <ur>` in your terminal.
+- run `npm install` on the root folder of the project.
+
 
 ## Available Scripts
 
@@ -29,42 +47,43 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Live Demo
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+[Live Demo](https://travelxhub.herokuapp.com/)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Authors 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+👤 **Robert Baiesita**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Robert's Profile
 
-## Learn More
+- [GitHub](https://github.com/ReshyResh)
+- [AngelList](https://angel.co/u/robert-baiesita)
+- [LinkedIn](https://www.linkedin.com/in/reshyresh/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+👤 **Ali Abbani**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Ali's Profile
 
-### Code Splitting
+- [GitHub](https://github.com/aliabbani)
+- [AngelList](https://angel.co/u/ali-abbani)
+- [LinkedIn](https://www.linkedin.com/in/ali-abbani-8b6246150/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🤝 Contributing
 
-### Analyzing the Bundle Size
+Contributions, issues, and feature requests are welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Feel free to check the [issues page](https://github.com/aliabbani/spaceX-group-project/issues).
 
-### Making a Progressive Web App
+## Show your support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Give a ⭐️ if you like this project!
 
-### Advanced Configuration
+## Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Hat tip to anyone who’s code was used
+- Inspiration
 
-### Deployment
+## 📝 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is [Microverse](https://www.microverse.org/) licensed.

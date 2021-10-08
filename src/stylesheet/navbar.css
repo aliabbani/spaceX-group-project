@@ -1,0 +1,45 @@
+.navBar {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  margin: 3vh 5vw;
+  padding: 0 1vw;
+  border-bottom: 1px solid gray;
+}
+
+.left-nav {
+  display: flex;
+}
+
+.logo-nav {
+  width: 90px;
+  height: 90px;
+  padding-bottom: 2vh;
+}
+
+.main-title {
+  padding-left: 1vw;
+  padding-top: 2vh;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.right-elements {
+  display: flex;
+  list-style: none;
+}
+
+.right-nav-li {
+  padding-left: 2vw;
+  font-size: 1.2em;
+  padding-top: 2vh;
+}
+
+.right-nav-li > a {
+  text-decoration: none;
+}
+
+.active-link {
+  color: rgb(0, 60, 255);
+  text-decoration: underline !important;
+}
