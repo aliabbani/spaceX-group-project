@@ -1,5 +1,78 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Component test snapshot App renders correctly 1`] = `
+Array [
+  <nav
+    className="navBar"
+  >
+    <div
+      className="left-nav"
+    >
+      <img
+        alt="logo"
+        className="logo-nav"
+        src="logo.png"
+      />
+      <h1
+        className="main-title"
+      >
+        Space Travelers Hub
+      </h1>
+    </div>
+    <ul
+      className="right-elements"
+    >
+      <li
+        className="right-nav-li"
+      >
+        <a
+          aria-current="page"
+          className="left-nav-a active-link"
+          href="/"
+          onClick={[Function]}
+          style={Object {}}
+        >
+          Rockets
+        </a>
+      </li>
+      <li
+        className="right-nav-li"
+      >
+        <a
+          aria-current={null}
+          className="left-nav-a"
+          href="/missions"
+          onClick={[Function]}
+        >
+          Missions
+        </a>
+      </li>
+      <li
+        className="right-nav-li"
+      >
+        <a
+          aria-current={null}
+          className="left-nav-a"
+          href="/profile"
+          onClick={[Function]}
+        >
+          My Profile
+        </a>
+      </li>
+    </ul>
+  </nav>,
+  <div
+    className="spinner-container"
+  >
+    <img
+      alt="loading"
+      className="spinner"
+      src="spinner.gif"
+    />
+  </div>,
+]
+`;
+
 exports[`Component test snapshot Missions renders correctly 1`] = `
 <div
   className="main-missions px-5"
@@ -36,6 +109,62 @@ exports[`Component test snapshot Missions renders correctly 1`] = `
 </div>
 `;
 
+exports[`Component test snapshot Profile renders correctly 1`] = `
+<div
+  className="profile-container"
+>
+  <div
+    style={
+      Object {
+        "maxWidth": "50%",
+      }
+    }
+  >
+    <h3>
+       
+      No rockets reserved!
+    </h3>
+    <div
+      className="row"
+    >
+      <div
+        className="col"
+      >
+        <div
+          className="list-group"
+          onKeyDown={[Function]}
+          role="tablist"
+        />
+      </div>
+    </div>
+    <div
+      className="row"
+    >
+      <div
+        className="col"
+      >
+        <div
+          className="tab-content"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="mission-container"
+  >
+    <h3>
+      No Missions joined!
+    </h3>
+  </div>
+</div>
+`;
+
+exports[`Component test snapshot Rockets renders correctly 1`] = `
+<div
+  className="main-rocket"
+/>
+`;
+
 exports[`Component test snapshot Router renders correctly 1`] = `
 <a
   aria-current="page"
@@ -46,4 +175,16 @@ exports[`Component test snapshot Router renders correctly 1`] = `
 >
   Rockets
 </a>
+`;
+
+exports[`Component test snapshot Spinner renders correctly 1`] = `
+<div
+  className="spinner-container"
+>
+  <img
+    alt="loading"
+    className="spinner"
+    src="spinner.gif"
+  />
+</div>
 `;

@@ -15,8 +15,7 @@ function TravelContainer() {
     dispatch(fetchPostsRequestRockets());
     dispatch(fetchPostsRequestMissions());
   }, []);
-  const rocketsTemp = useSelector((state) => state.spaceReducer.rockets);
-  const rockets = { rocketsTemp };
+  const rockets = useSelector((state) => state.spaceReducer.rockets);
   const loading = useSelector((state) => state.spaceReducer.loading);
   const missions = useSelector((state) => state.spaceReducer.missions);
 

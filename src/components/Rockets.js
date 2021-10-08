@@ -5,10 +5,9 @@ import RocketInfo from './RocketInfo';
 
 const Rockets = (props) => {
   const { rockets } = props;
-  const { rocketsTemp } = rockets;
   return (
     <div className="main-rocket">
-      {rocketsTemp.map((rocket) => (
+      {rockets.map((rocket) => (
         <RocketInfo rocket={rocket} key={uuidv4()} />
       ))}
     </div>
@@ -16,12 +15,10 @@ const Rockets = (props) => {
 };
 
 Rockets.defaultProps = {
-  rockets: {},
-  rocketsTemp: {},
+  rockets: [],
 };
 Rockets.propTypes = {
-  rockets: propTypes.instanceOf(Object),
-  rocketsTemp: propTypes.instanceOf(Object),
+  rockets: propTypes.instanceOf(Array),
 };
 
 export default Rockets;
