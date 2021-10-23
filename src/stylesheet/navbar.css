@@ -12,16 +12,13 @@
 }
 
 .logo-nav {
-  width: 90px;
+  width: 80px;
   height: 90px;
   padding-bottom: 2vh;
 }
 
 .main-title {
-  padding-left: 1vw;
-  padding-top: 2vh;
-  font-size: 1.7rem;
-  font-weight: bold;
+  display: none;
 }
 
 .right-elements {
@@ -31,7 +28,7 @@
 
 .right-nav-li {
   padding-left: 2vw;
-  font-size: 1.2em;
+  font-size: 0.9em;
   padding-top: 2vh;
 }
 
@@ -42,4 +39,23 @@
 .active-link {
   color: rgb(0, 60, 255);
   text-decoration: underline !important;
+}
+
+@media screen  and (min-width: 500px) {
+  .logo-nav {
+    width: 90px;
+    height: 90px;
+    padding-bottom: 2vh;
+  }
+
+  .main-title {
+    padding-left: 1vw;
+    padding-top: 2vh;
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
+
+  .right-nav-li {
+    font-size: 1.2em;
+  }
 }
