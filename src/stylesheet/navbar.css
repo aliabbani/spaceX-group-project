@@ -1,8 +1,8 @@
 .navBar {
   display: flex;
   flex-flow: row;
-  justify-content: space-between;
-  margin: 3vh 5vw;
+  justify-content: space-around;
+  margin: 3vh 2vw;
   padding: 0 1vw;
   border-bottom: 1px solid gray;
 }
@@ -12,26 +12,23 @@
 }
 
 .logo-nav {
-  width: 90px;
-  height: 90px;
+  width: 70px;
+  height: 70px;
   padding-bottom: 2vh;
 }
 
 .main-title {
-  padding-left: 1vw;
-  padding-top: 2vh;
-  font-size: 1.7rem;
-  font-weight: bold;
+  display: none;
 }
 
 .right-elements {
   display: flex;
   list-style: none;
+  gap: 5px;
 }
 
 .right-nav-li {
-  padding-left: 2vw;
-  font-size: 1.2em;
+  font-size: 1em;
   padding-top: 2vh;
 }
 
@@ -42,4 +39,29 @@
 .active-link {
   color: rgb(0, 60, 255);
   text-decoration: underline !important;
+}
+
+@media (min-width: 612px) {
+  .navBar {
+    justify-content: space-between;
+    margin: 3vh 2vw;
+  }
+
+  .logo-nav {
+    width: 70px;
+    height: 70px;
+  }
+
+  .main-title {
+    display: flex;
+    padding-left: 1vw;
+    padding-top: 2vh;
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
+
+  .right-nav-li {
+    padding-left: 2vw;
+    font-size: 1.2em;
+  }
 }
