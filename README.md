@@ -49,7 +49,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Live Demo
 
-[Live Demo](https://travelxhub.herokuapp.com/)
+[Live Demo](https://imaginative-smakager-cf8a46.netlify.app)
 
 ## Authors 
 
